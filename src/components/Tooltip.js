@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
+import './Tooltip.css';
 
 function Tooltip({ text, children }) {
-  const [show, setShow] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
-      onMouseEnter={() => setShow(true)}
-      onMouseLeave={() => setShow(false)}
+      className="tooltip"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <div>{children}</div>
-      {show && <div>{text}</div>}
+      {children}
+      {isHovered && <div className="tooltiptext">{text}</div>}
     </div>
   );
 }

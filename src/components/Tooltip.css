@@ -5,17 +5,18 @@
 
 .tooltiptext {
   position: absolute;
-  bottom: 125%;
+  bottom: 125%; /* position above */
   left: 50%;
   transform: translateX(-50%);
   background: #333;
   color: #fff;
-  padding: 6px 8px;
+  padding: 6px 10px;
   border-radius: 4px;
   white-space: nowrap;
+  z-index: 1;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s;
+  transition: opacity 0.2s ease;
 }
 
 .tooltip:hover .tooltiptext {

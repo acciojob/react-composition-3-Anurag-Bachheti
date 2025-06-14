@@ -3,19 +3,13 @@ import Tooltip from './Tooltip';
 
 function App() {
   return (
-    <div style={{ margin: '50px' }}>
+    <div style={{ margin: '50px', display: 'flex', flexDirection: 'column', gap: '40px' }}>
       <Tooltip text="This is a tooltip">
-        <div>
-          Hover over me
-        </div>
+        <span>Hover over me</span>
       </Tooltip>
 
-      <br /><br />
-
       <Tooltip text="This is another tooltip">
-        <div>
-          Hover over me to see another tooltip
-        </div>
+        <span>Hover over me to see another tooltip</span>
       </Tooltip>
     </div>
   );
